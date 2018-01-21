@@ -1,0 +1,10 @@
+package br.com.alura.contas;
+
+public class SeguroDeVida implements Tributavel {
+
+	@Override
+	public double calculaAtributos() {
+		return 42;
+	}
+
+}

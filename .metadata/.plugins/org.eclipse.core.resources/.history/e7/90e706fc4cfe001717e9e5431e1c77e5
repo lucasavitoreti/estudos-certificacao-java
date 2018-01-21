@@ -1,0 +1,8 @@
+
+public class Conta {
+	private double saldo;
+	
+	public double getSaldo() {
+		return this.getSaldo();
+	}
+}

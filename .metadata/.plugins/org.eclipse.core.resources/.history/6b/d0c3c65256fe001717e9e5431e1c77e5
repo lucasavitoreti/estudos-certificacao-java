@@ -1,0 +1,7 @@
+
+public class AtualizadorDeContas {
+	private selic;
+	public AtualizadorDeContas(double selic) {
+		this.selic = selic;
+	}
+}
