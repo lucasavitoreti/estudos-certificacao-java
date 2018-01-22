@@ -1,0 +1,38 @@
+package br.com.alura.contas.modelo;
+
+public abstract class Conta {
+	protected double saldo;
+	public int numero;
+
+	public int getNumero() {
+		return this.numero;
+	}
+
+	public void setNumero(int numero) {
+		this.numero = numero;
+	}
+
+	public double getSaldo() {
+		return this.saldo;
+	}
+
+	public void deposita(double valor) {
+		if (valor <= 0) {
+			throw new ValorInvalidoException("Valor inválido:" + valor);
+		} else {
+			this.saldo += valor;
+		}
+	}
+
+	public void saca(double valor) {
+		this.saldo -= valor;
+	}
+
+	public abstract void atualiza(double taxa);
+
+	@Override
+	public String toString() {
+		return "Conta numero: " + this.numero + ", Saldo: " + this.saldo;
+	}
+
+}

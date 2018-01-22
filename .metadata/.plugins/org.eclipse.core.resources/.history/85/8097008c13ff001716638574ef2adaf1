@@ -1,0 +1,18 @@
+package br.com.alura.contas.main;
+
+import java.util.ArrayList;
+
+import br.com.alura.contas.modelo.Conta;
+import br.com.alura.contas.modelo.ContaCorrente;
+
+public class TestaColecoes {
+
+	public static void main(String[] args) {
+		ArrayList<Conta> contas = new ArrayList<Conta>();
+		ContaCorrente cc1 = new ContaCorrente();
+		cc1.setNumero(12345);
+		cc1.deposita(1000);
+		
+	}
+
+}

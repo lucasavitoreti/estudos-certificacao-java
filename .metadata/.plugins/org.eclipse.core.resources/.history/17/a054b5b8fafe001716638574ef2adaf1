@@ -1,0 +1,11 @@
+package br.com.alura.contas.main;
+
+import java.io.FileInputStream;
+
+public class TestaJavaIO {
+
+	public static void main(String[] args) {
+		FileInputStream fs = new FileInputStream("/home/lvito/Documents/educacao/cursos/fj11/alura-fj11/data/leitura.txt");
+	}
+
+}

@@ -1,0 +1,17 @@
+package br.com.alura.contas.main;
+
+import br.com.alura.contas.modelo.ContaCorrente;
+
+public class TestaException {
+
+	public static void main(String[] args) {
+
+		ContaCorrente cc = new ContaCorrente();
+		// try {
+		// cc.deposita(-100);
+		// } catch (IllegalArgumentException e) {
+		// System.out.println("Erro: " + e);
+		// }
+		cc.deposita(-100);
+	}
+}

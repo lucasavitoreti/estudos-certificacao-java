@@ -1,0 +1,8 @@
+package br.com.alura.contas.main;
+
+import java.lang.*;
+
+public class TestaPalindromo {
+	Palindromo p = new Palindromo("Socorram-me, subi no ônibus em Marrocos");
+	System.out.println("teste");
+}

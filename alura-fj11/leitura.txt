@@ -1,0 +1,21 @@
+Vamos passar a conhecer APIs do Java. java.io e java.util possuem as classes que você mais comumente vai usar, não importando se seu aplicativo é desktop, web, ou mesmo para celulares.
+
+Apesar de ser importante conhecer nomes e métodos das classes mais utilizadas, o interessante aqui é que você enxergue que todos os conceitos previamente estudados são aplicados a toda hora nas classes da biblioteca padrão.
+
+Não se preocupe em decorar nomes. Atenha-se em entender como essas classes estão relacionadas e como elas estão tirando proveito do uso de interfaces, polimorfismo, classes abstratas e encapsulamento. Lembre-se de estar com a documentação (javadoc) aberta durante o contato com esses pacotes.
+
+Veremos também threads e sockets em capítulos posteriores, que ajudarão a condensar nosso conhecimento, tendo em vista que no exercício de sockets utilizaremos todos conceitos aprendidos, juntamente com as várias APIs.
+
+Orientação a objetos no java.io
+
+Assim como todo o resto das bibliotecas em Java, a parte de controle de entrada e saída de dados (conhecido como io) é orientada a objetos e usa os principais conceitos mostrados até agora: interfaces, classes abstratas e polimorfismo.
+
+A ideia atrás do polimorfismo no pacote java.io é de utilizar fluxos de entrada (InputStream) e de saída (OutputStream) para toda e qualquer operação, seja ela relativa a um arquivo, a um campo blob do banco de dados, a uma conexão remota via sockets, ou até mesmo às entrada e saída padrão de um programa (normalmente o teclado e o console).
+
+As classes abstratas InputStream e OutputStream definem, respectivamente, o comportamento padrão dos fluxos em Java: em um fluxo de entrada, é possível ler bytes e, no fluxo de saída, escrever bytes.
+
+A grande vantagem dessa abstração pode ser mostrada em um método qualquer que utiliza um OutputStream recebido como argumento para escrever em um fluxo de saída. Para onde o método está escrevendo? Não se sabe e não importa: quando o sistema precisar escrever em um arquivo ou em uma socket, basta chamar o mesmo método, já que ele aceita qualquer filha de OutputStream!
+
+InputStream, InputStreamReader e BufferedReader
+
+Para ler um byte de um arquivo, vamos usar o leitor de arquivo, o FileInputStream. Para um FileInputStream conseguir ler um byte, ele precisa saber de onde ele deverá ler. Essa informação é tão importante que quem escreveu essa classe obriga você a passar o nome do arquivo pelo construtor: sem isso o objeto não pode ser construído.

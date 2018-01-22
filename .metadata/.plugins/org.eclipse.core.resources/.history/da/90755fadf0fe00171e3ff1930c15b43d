@@ -1,0 +1,18 @@
+package br.com.alura.contas.main;
+
+public class Palindromo {
+	private String texto;
+
+	public Palindromo(String texto) {
+		this.texto = texto;
+	}
+
+	public String getTexto() {
+		return texto;
+	}
+
+	public void setTexto(String texto) {
+		this.texto = texto;
+	}
+
+}

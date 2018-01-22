@@ -1,0 +1,6 @@
+package br.com.alura.contas.main;
+
+public class TestaPalindromo {
+	Palindromo p = new Palindromo("Socorram-me, subi no ônibus em Marrocos");
+	
+}
